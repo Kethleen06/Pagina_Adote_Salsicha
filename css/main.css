@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Roboto+Slab:wght@100..900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -17,6 +21,10 @@
     /* <-- adiciona espaço entre os cards */
 }
 
+h1 {
+    font-family: "Roboto Slab", serif;
+    font-size: 100px;
+}
 
 .card {
     width: 420px;
@@ -30,6 +38,7 @@
     margin: 50px auto;
     padding: 20px;
     border-radius: 25px;
+    font-family: "Roboto Slab", serif;
 
 }
 
@@ -45,4 +54,5 @@
     padding: 2.6px;
     border-radius: 18px;
     /* botão arredondado igual ao card */
+    font-family: "Momo Trust Display", sans-serif;
 }
