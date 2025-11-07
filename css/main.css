@@ -4,3 +4,45 @@
     box-sizing: border-box;
 
 }
+
+#card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #d6ccc2;
+    /* tom terroso claro */
+    gap: 40px;
+    /* <-- adiciona espaço entre os cards */
+}
+
+
+.card {
+    width: 420px;
+    display: flex;
+    background-color: rgb(97, 74, 65);
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 25px;
+
+}
+
+.card img {
+    width: 250px;
+    height: 200px;
+
+
+}
+
+.card button {
+    width: 100px;
+    padding: 2.6px;
+    border-radius: 18px;
+    /* botão arredondado igual ao card */
+}
