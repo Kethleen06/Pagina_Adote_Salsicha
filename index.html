@@ -6,41 +6,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site de adoção de Salsicha</title>
     <link rel="stylesheet" href="./css/main.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
+
     <header>
         <h1>Adote um Salsicha</h1>
+        <p class="subtitle">Aplicando filtros CSS para criar efeitos visuais interessantes</p>
     </header>
 
-    <main>
-        <section class="card-container" id="card-container">
-            <div class="card">
-                <h3>Luna</h3>
-                <img src="assets/img/salsicha_filhote.jfif" alt="Imagem de filhote de Salsicha">
-                <button>Adotar</button>
-            </div>
-            <div class="card">
-                <h3>Teo</h3>
-                <img src="assets/img/salsicha2.jfif" alt="Imagem de filhote de Salsicha">
-                <button>Adotar</button>
-            </div>
-            <div class="card">
-                <h3>Sofya</h3>
-                <img src="assets/img/salsicha3.jfif" alt="Imagem de filhote de Salsicha">
-                <button>Adotar</button>
-            </div>
+    <section class="hero">
+        <div class="background-image" id="background"></div>
+        <div class="overlay">
+            <h2>Adote um Amigo de Quatro Patas!</h2>
+            <p>Existem muitos cachorrinhos esperando por um lar cheio de amor e carinho. Aqui, você encontra
+                companheiros leais, brincalhões e cheios de afeto, prontos para fazer parte da sua família.
+                <br>Adotar é um gesto de amor que transforma duas vidas: a sua e a de um bichinho que só precisa de uma
+                chance. Escolha seu novo melhor amigo, cuide dele com responsabilidade e viva momentos incríveis juntos!
+                <br>Adote, não compre. Dê um lar, ganhe um coração.
+            </p>
+        </div>
+    </section>
 
-        </section>
-    </main>
+    <section class="content">
+        <div class="card">
+            <h3>Sobre a Raça</h3>
+            <p>O Dachshund, também conhecido como "cachorro salsicha", é uma raça de cães originária da Alemanha. São
+                conhecidos por suas pernas curtas e corpo longo.</p>
+            <p>Esses cães são inteligentes, corajosos e possuem um forte instinto de caça, originalmente criados para
+                perseguir texugos em tocas.</p>
+        </div>
+
+        <div class="card">
+            <h3>Nossa Missão</h3>
+            <p>Somos um grupo apaixonado por cães que acredita que todo animal merece um lar cheio de amor, respeito e
+                cuidado. Nosso site foi criado com o objetivo de conectar pessoas dispostas a adotar com cachorrinhos
+                que estão à espera de uma nova chance.
+                <br>Aqui, você encontra histórias, fotos e informações sobre nossos salsichinhas disponíveis para
+                adoção. Cada um deles tem uma personalidade única e está pronto para encher sua vida de alegria e
+                companheirismo.
+                <br>Acreditamos que adotar é um ato de amor — e queremos tornar esse processo simples, responsável e
+                cheio de significado.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Vantagens do Efeito</h3>
+            <p>Nosso site nasceu com um propósito simples e cheio de amor: ajudar cachorrinhos a encontrarem um lar
+                cheio de carinho e cuidado.
+                <br>Trabalhamos em parceria com a ONG Amigos de Patas, uma organização dedicada ao resgate, tratamento e
+                adoção responsável de cães abandonados.
+
+                <br>Aqui, você encontra cães de diferentes idades, portes e personalidades — todos vacinados,
+                vermifugados e prontos para ganhar uma nova família.
+                <br>Acreditamos que adotar é um ato de amor que transforma vidas: a do animal e a do novo tutor.
+
+                <br>Nosso objetivo é tornar o processo de adoção fácil, seguro e repleto de empatia. Navegue pelos
+                perfis, conheça nossos peludos e descubra qual deles vai conquistar seu coração.
+                <br>Adote, não compre.
+                Dê uma nova chance, ganhe um amigo para a vida toda.
+            </p>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="card">
+            <h3>Luna</h3>
+            <img src="assets/img/salsicha_filhote.jfif" alt="Imagem de filhote de Salsicha">
+            <button>Adotar</button>
+        </div>
+        <div class="card">
+            <h3>Teo</h3>
+            <img src="assets/img/salsicha4.jfif" alt="Imagem de filhote de Salsicha">
+            <button>Adotar</button>
+        </div>
+        <div class="card">
+            <h3>Sofya</h3>
+            <img src="assets/img/salsicha3.jfif" alt="Imagem de filhote de Salsicha">
+            <button>Adotar</button>
+        </div>
+    </section>
+
+    <section class="blur-control">
+        <h3>Controle de Blur</h3>
+        <p>Ajuste o nível de desfoque da imagem de fundo:</p>
+        <div class="slider-container">
+            <input type="range" id="blurSlider" min="0" max="20" value="8" step="0.5">
+            <span class="blur-value" id="blurValue">8px</span>
+        </div>
+    </section>
 
     <footer>
-        <p>Desenvolvido no IOS por Kethleen Gonçalves 💜</p>
+        <div class="container">
+            <p>Exemplo de imagem com efeito blur e transparência | Desenvolvido para demonstração</p>
+        </div>
     </footer>
+    <script>
+        // Controle interativo do blur
+        const blurSlider = document.getElementById('blurSlider');
+        const blurValue = document.getElementById('blurValue');
+        const background = document.getElementById('background');
 
-    <!-- JS deve ser chamado assim -->
-    <script src="../Pagina_Adote_Furao/js/script.js"></script>
+        blurSlider.addEventListener('input', function () {
+            const blurAmount = this.value + 'px';
+            blurValue.textContent = blurAmount;
+            background.style.filter = `blur(${blurAmount}) brightness(0.9)`;
+        });
+    </script>
 </body>
 
 </html>
