@@ -1,208 +1,58 @@
- * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- }
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap');
 
- body {
-     background: #f0f0f0;
-     color: #333;
-     line-height: 1.6;
- }
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Roboto+Slab:wght@100..900&display=swap');
 
- .container {
-     max-width: 1200px;
-     margin: 0 auto;
-     padding: 20px;
- }
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 
- header {
-     text-align: center;
-     margin-bottom: 40px;
-     padding: 20px;
-     background: rgba(255, 255, 255, 0.9);
-     border-radius: 10px;
-     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
- }
+}
 
- h1 {
-     color: #8B4513;
-     margin-bottom: 10px;
-     font-size: 2.5rem;
- }
+#card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #d6ccc2;
+    /* tom terroso claro */
+    gap: 40px;
+    /* <-- adiciona espaço entre os cards */
+}
 
- .subtitle {
-     color: #666;
-     font-size: 1.2rem;
- }
+h1 {
+    font-family: "Roboto Slab", serif;
+    font-size: 100px;
+}
 
- .hero {
-     position: relative;
-     height: 70vh;
-     margin: 30px 0;
-     border-radius: 15px;
-     overflow: hidden;
-     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
- }
+.card {
+    width: 420px;
+    display: flex;
+    background-color: rgb(97, 74, 65);
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 25px;
+    font-family: "Roboto Slab", serif;
 
- .background-image {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background-image: url('https://premierpet.com.br/wp-content/uploads/2024/12/dachshund-filhotes-1024x684.jpg');
-     background-size: cover;
-     background-position: center;
-     filter: blur(8px) brightness(0.9);
-     transform: scale(1.05);
-     /* Para evitar bordas devido ao blur */
- }
+}
 
- .overlay {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background: rgba(139, 69, 19, 0.3);
-     /* Cor marrom com transparência */
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     text-align: center;
-     padding: 20px;
- }
+.card img {
+    width: 250px;
+    height: 200px;
 
- .overlay h2 {
-     color: white;
-     font-size: 2.8rem;
-     margin-bottom: 20px;
-     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
- }
 
- .overlay p {
-     color: white;
-     font-size: 1.3rem;
-     max-width: 600px;
-     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
- }
+}
 
- .content {
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-     gap: 30px;
-     margin: 40px 0;
- }
-
- .card {
-     background: rgba(255, 255, 255, 0.85);
-     border-radius: 10px;
-     padding: 25px;
-     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-     transition: transform 0.3s ease, box-shadow 0.3s ease;
- }
-
- .card:hover {
-     transform: translateY(-5px);
-     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
- }
-
- .card h3 {
-     color: #8B4513;
-     margin-bottom: 15px;
-     font-size: 1.5rem;
- }
-
- .card p {
-     color: #555;
-     margin-bottom: 15px;
- }
-
- .card img {
-     width: 250px;
-     height: 200px;
- }
-
- .blur-control {
-     background: white;
-     padding: 25px;
-     border-radius: 10px;
-     margin: 30px 0;
-     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
- }
-
- .blur-control h3 {
-     color: #8B4513;
-     margin-bottom: 15px;
- }
-
- .slider-container {
-     display: flex;
-     align-items: center;
-     gap: 15px;
- }
-
- input[type="range"] {
-     flex: 1;
-     height: 8px;
-     -webkit-appearance: none;
-     background: #ddd;
-     border-radius: 5px;
-     outline: none;
- }
-
- input[type="range"]::-webkit-slider-thumb {
-     -webkit-appearance: none;
-     width: 20px;
-     height: 20px;
-     background: #8B4513;
-     border-radius: 50%;
-     cursor: pointer;
- }
-
- .blur-value {
-     font-weight: bold;
-     color: #8B4513;
-     min-width: 40px;
- }
-
- .code-example {
-     background: #2d2d2d;
-     color: #f8f8f2;
-     padding: 20px;
-     border-radius: 8px;
-     margin: 20px 0;
-     overflow-x: auto;
-     font-family: 'Courier New', monospace;
- }
-
- .code-example h3 {
-     color: #ff79c6;
-     margin-bottom: 10px;
- }
-
- footer {
-     text-align: center;
-     padding: 20px;
-     margin-top: 40px;
-     background: #8B4513;
-     color: white;
-     border-radius: 10px;
- }
-
- @media (max-width: 768px) {
-     .hero {
-         height: 50vh;
-     }
-
-     .overlay h2 {
-         font-size: 2rem;
-     }
-
-     .overlay p {
-         font-size: 1rem;
-     }
- }
+.card button {
+    width: 100px;
+    padding: 2.6px;
+    border-radius: 18px;
+    /* botão arredondado igual ao card */
+    font-family: "Momo Trust Display", sans-serif;
+}
